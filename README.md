@@ -128,7 +128,7 @@ Finally to render it on the page, use ajax so it spits out the json.
 
 </body>
 
-<script>
+
     $(document).ready(function(){
         $.ajax({
             url : "/myApp/pg/user/highchartsDemoColumn",
@@ -154,4 +154,3 @@ Finally to render it on the page, use ajax so it spits out the json.
             }
         });
     });
-</script>
