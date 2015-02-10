@@ -1,7 +1,5 @@
 package org.snbsniper.highchartsFactory;
 
-import org.danielftapiar.highchartsFactory.Style;
-
 import java.io.Serializable;
 
 public class DataLabels implements Serializable {

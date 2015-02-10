@@ -1,8 +1,5 @@
 package org.snbsniper.highchartsFactory;
 
-import org.danielftapiar.highchartsFactory.CSSObject;
-import org.danielftapiar.highchartsFactory.DrillUpButton;
-import org.danielftapiar.highchartsFactory.Serie;
 
 import java.io.Serializable;
 import java.util.ArrayList;

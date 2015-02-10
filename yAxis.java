@@ -1,8 +1,5 @@
 package org.snbsniper.highchartsFactory;
 
-import org.danielftapiar.highchartsFactory.DataLabels;
-import org.danielftapiar.highchartsFactory.TitleConfig;
-
 import java.io.Serializable;
 
 public class yAxis implements Serializable {

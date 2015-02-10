@@ -1,7 +1,5 @@
 package org.snbsniper.highchartsFactory;
 
-import dev.danielftapiar.CircularList;
-
 import java.io.Serializable;
 
 /**

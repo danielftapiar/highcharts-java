@@ -1,7 +1,5 @@
 package org.snbsniper.highchartsFactory;
 
-import org.danielftapiar.highchartsFactory.Column;
-
 import java.io.Serializable;
 
 public class PlotOptionsColumn implements Serializable {

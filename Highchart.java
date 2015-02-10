@@ -1,10 +1,5 @@
 package org.snbsniper.highchartsFactory;
 
-import dev.danielftapiar.CircularList;
-import org.danielftapiar.highchartsFactory.Chart;
-import org.danielftapiar.highchartsFactory.Drilldown;
-import org.danielftapiar.highchartsFactory.TitleConfig;
-import org.danielftapiar.highchartsFactory.Tooltip;
 
 import java.io.Serializable;
 import java.util.ArrayList;
