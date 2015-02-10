@@ -1,6 +1,4 @@
-package org.danielftapiar.highchartsFactory;
-
-import org.danielftapiar.highchartsFactory.Column;
+package org.snbsniper.highchartsFactory;
 
 import java.io.Serializable;
 

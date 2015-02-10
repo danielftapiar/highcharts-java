@@ -1,7 +1,4 @@
-package org.danielftapiar.highchartsFactory;
-
-import org.danielftapiar.highchartsFactory.DataLabels;
-import org.danielftapiar.highchartsFactory.TitleConfig;
+package org.snbsniper.highchartsFactory;
 
 import java.io.Serializable;
 

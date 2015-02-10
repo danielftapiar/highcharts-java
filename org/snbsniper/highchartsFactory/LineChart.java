@@ -1,10 +1,7 @@
-package org.danielftapiar.highchartsFactory;
-
-import dev.danielftapiar.CircularList;
+package org.snbsniper.highchartsFactory;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by danielftapiar on 2/6/15.

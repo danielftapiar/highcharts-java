@@ -1,6 +1,5 @@
-package org.danielftapiar.highchartsFactory;
+package org.snbsniper.highchartsFactory;
 
-import org.danielftapiar.highchartsFactory.Position;
 
 import java.io.Serializable;
 

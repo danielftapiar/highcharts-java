@@ -1,6 +1,6 @@
-package org.danielftapiar.highchartsFactory;
+package org.snbsniper.highchartsFactory;
 
-import org.danielftapiar.highchartsFactory.Event;
+import org.snbsniper.highchartsFactory.Event;
 
 import java.io.Serializable;
 
