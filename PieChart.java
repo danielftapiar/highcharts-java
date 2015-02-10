@@ -1,4 +1,4 @@
-package org.danielftapiar.highchartsFactory;
+package org.snbsniper.highchartsFactory;
 
 import dev.danielftapiar.CircularList;
 
