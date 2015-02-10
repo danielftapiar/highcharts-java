@@ -1,4 +1,7 @@
-package com.arbol_logika.highcharts;
+package org.danielftapiar.highchartsFactory;
+
+import org.danielftapiar.highchartsFactory.DataLabels;
+import org.danielftapiar.highchartsFactory.TitleConfig;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -14,7 +17,22 @@ public class xAxis implements Serializable {
     public xAxis() {
         this.categories = new ArrayList<String>();
         this.title = new TitleConfig();
-        this.labels = new DataLabels();
+        DataLabels xAxisDataLabel = new DataLabels();
+        xAxisDataLabel.setDistance (0);
+        xAxisDataLabel.setStyle (new Style());
+        xAxisDataLabel.setRotation (0);
+        xAxisDataLabel.setFormat("{value}");
+        xAxisDataLabel.setEnabled (true);
+        xAxisDataLabel.setAlign("left");
+        xAxisDataLabel.setColor ("black");
+        xAxisDataLabel.setOverflow ("justify");
+        xAxisDataLabel.setConnectorColor ("black");
+        xAxisDataLabel.setX(-25);
+        xAxisDataLabel.setY(15);
+        xAxisDataLabel.setZ(7);
+
+        this.setLabels(xAxisDataLabel);
+
     }
 
     public TitleConfig getTitle() {

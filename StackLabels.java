@@ -1,9 +1,11 @@
-package com.arbol_logika.highcharts;
+package org.danielftapiar.highchartsFactory;
+
+import java.io.Serializable;
 
 /**
  * Created by desarrollo on 12-12-14.
  */
-public class StackLabels {
+public class StackLabels implements Serializable{
 
 
     private String align;

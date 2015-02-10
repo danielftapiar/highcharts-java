@@ -1,4 +1,7 @@
-package com.arbol_logika.highcharts;
+package org.danielftapiar.highchartsFactory;
+
+import org.danielftapiar.highchartsFactory.DataLabels;
+import org.danielftapiar.highchartsFactory.TitleConfig;
 
 import java.io.Serializable;
 
@@ -14,7 +17,20 @@ public class yAxis implements Serializable {
         this.min = 0F;
         this.title = new TitleConfig();
         //this.stackLabels = new StackLabels();
-        this.labels = new DataLabels();
+        DataLabels yAxisDataLabel = new DataLabels();
+        yAxisDataLabel.setDistance (0);
+        yAxisDataLabel.setStyle (new Style());
+        yAxisDataLabel.setRotation (0);
+        yAxisDataLabel.setFormat("{value}");
+        yAxisDataLabel.setEnabled (true);
+        yAxisDataLabel.setAlign("left");
+        yAxisDataLabel.setColor ("black");
+        yAxisDataLabel.setOverflow ("justify");
+        yAxisDataLabel.setConnectorColor ("black");
+        yAxisDataLabel.setX(-5);
+        yAxisDataLabel.setY(5);
+        yAxisDataLabel.setZ(7);
+        this.setLabels(yAxisDataLabel);
 
     }
 

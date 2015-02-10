@@ -1,4 +1,4 @@
-package com.arbol_logika.highcharts;
+package org.danielftapiar.highchartsFactory;
 
 import java.io.Serializable;
 
@@ -9,7 +9,7 @@ public class Style implements Serializable {
     private String whiteSpace;
 
     public Style(){
-        this.color = "##6D869F";
+        this.color = "#6D869F";
         this.fontWeight = "bold";
         this.fontSize = "10px";
         this.whiteSpace = "nowrap";

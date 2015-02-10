@@ -1,4 +1,7 @@
-package com.arbol_logika.highcharts;
+package org.danielftapiar.highchartsFactory;
+
+import org.danielftapiar.highchartsFactory.DataLabels;
+import org.danielftapiar.highchartsFactory.Style;
 
 import java.io.Serializable;
 
@@ -16,7 +19,7 @@ public class PieOptions implements Serializable {
         config.setStyle(new Style());
         this.dataLabels = config;
         this.allowPointSelect = false;
-        this.cursor = "cursor";
+        this.cursor = "pointer";
         this.point = new Point();
     }
 

@@ -1,21 +1,30 @@
-package com.arbol_logika.highcharts;
+package org.danielftapiar.highchartsFactory;
 
+
+
+import dev.danielftapiar.CircularList;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class HighchartXY extends Highchart  {
+/**
+ * Created by danielftapiar on 2/4/15.
+ */
+public abstract class HighchartXY extends Highchart  implements Serializable{
+
     private xAxis xAxis;
     private yAxis yAxis;
 
-    protected HighchartXY(List<Object[]> query, String chartType) {
-        super(query, chartType);
+    public HighchartXY(ChartType chartType) {
+        super(chartType);
         this.xAxis = new xAxis();
         this.yAxis = new yAxis();
         this.xAxis.labels.align="left";
         this.yAxis.labels.align="right";
-
-        
     }
+
+
 
     public xAxis getxAxis() {
         return xAxis;
@@ -49,14 +58,14 @@ public abstract class HighchartXY extends Highchart  {
         this.setxAxis(xAxis1);
     }
 
-    public void setCategories(Integer index) {
-        // 0 based index
-        List<String> categories = new ArrayList<String>();
-        for(Object[] i : this.getQuery()){
-            categories.add((String)i[index]);
-        }
-        this.getxAxis().setCategories(categories);
-    }
+//    public void setCategories(Integer index) {
+//        // 0 based index
+//        List<String> categories = new ArrayList<String>();
+//        for(Object[] i : this.getQuery()){
+//            categories.add((String)i[index]);
+//        }
+//        this.getxAxis().setCategories(categories);
+//    }
 
     public void setXAxisRotation(int rotation) {
         this.getxAxis().getLabels().setRotation(rotation);
@@ -64,7 +73,7 @@ public abstract class HighchartXY extends Highchart  {
 
     public void allowStackingLabels(boolean b) {
         if(b){
-           // yAxis.stackLabels = new StackLabels();
+            // yAxis.stackLabels = new StackLabels();
         }
     }
 
@@ -93,5 +102,27 @@ public abstract class HighchartXY extends Highchart  {
 
     public void setYAxisMinValue(float value){
         this.getyAxis().setMin(value);
+    }
+
+    public void setCategories(ArrayList<String> categories) {
+        this.getxAxis().setCategories(categories);
+    }
+
+//    public abstract void setSeries();
+
+    public void processChart() {
+        CircularList circularListColor = this.obtainCircularColorList();
+        for(Serie i : this.getSeries()){
+            if(i.getColor() == null){
+                i.setColor((String) circularListColor.getData());
+            }
+            circularListColor = circularListColor.getNextNode();
+        }
+
+        for(Serie i : this.getDrilldown().getSeries()){
+            if(i.getType() == null || i.getType().equals("")){
+                i.setType(this.getChart().getType());
+            }
+        }
     }
 }

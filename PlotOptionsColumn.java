@@ -1,4 +1,6 @@
-package com.arbol_logika.highcharts;
+package org.danielftapiar.highchartsFactory;
+
+import org.danielftapiar.highchartsFactory.Column;
 
 import java.io.Serializable;
 

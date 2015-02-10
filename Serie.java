@@ -1,24 +1,25 @@
-package com.arbol_logika.highcharts;
+package org.danielftapiar.highchartsFactory;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class Serie implements Serializable {
+
+
     private String type;
     private String name;
     private ArrayList<Data> data;
     private String id;
-    private Integer filterIndex;
     private String color;
     private DataLabels dataLabels;
-    private Integer XIndex;
 
 
     public Serie() {
         this.type = "";
         this.name = "";
         this.data = new ArrayList<Data>();
-        this.id = "";
+        this.id = UUID.randomUUID().toString();
         this.dataLabels = new DataLabels();
     }
 
@@ -54,14 +55,6 @@ public class Serie implements Serializable {
         this.id = id;
     }
 
-    public Integer getFilterIndex() {
-        return filterIndex;
-    }
-
-    public void setFilterIndex(Integer filterIndex) {
-        this.filterIndex = filterIndex;
-    }
-
     public String getColor() {
         return color;
     }
@@ -79,11 +72,4 @@ public class Serie implements Serializable {
     }
 
 
-    public void setXIndex(Integer XIndex) {
-        this.XIndex = XIndex;
-    }
-
-    public Integer getXIndex() {
-        return XIndex;
-    }
 }

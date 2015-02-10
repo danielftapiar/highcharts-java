@@ -1,4 +1,6 @@
-package com.arbol_logika.highcharts;
+package org.danielftapiar.highchartsFactory;
+
+import org.danielftapiar.highchartsFactory.Event;
 
 import java.io.Serializable;
 
@@ -7,25 +9,25 @@ public class Chart implements Serializable {
     public static final String LINE_TYPE = "line";
     public static final String PIE_TYPE = "pie";
 
-    String type;
-    Boolean plotShadow;
-    Float plotBorderWidth;
+    private String type;
+    private Boolean plotShadow;
+    private Float plotBorderWidth;
     private Event events;
 
 
 
 
-    public Chart(String columnType){
+    public Chart(ChartType columnType){
         this.plotBorderWidth = 1F;
         this.plotShadow = false;
         this.events = new Event();
-        if(columnType.equals(Chart.COLUMN_TYPE)){
+        if(columnType.equals(ChartType.COLUMN)){
             this.type = COLUMN_TYPE;
         }
-        if(columnType.equals(Chart.PIE_TYPE)){
+        if(columnType.equals(ChartType.PIE)){
             this.type = PIE_TYPE;
         }
-        if(columnType.equals(Chart.LINE_TYPE)){
+        if(columnType.equals(ChartType.LINE)){
             this.type = LINE_TYPE;
         }
 

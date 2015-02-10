@@ -1,4 +1,4 @@
-package com.arbol_logika.highcharts;
+package org.danielftapiar.highchartsFactory;
 
 import java.io.Serializable;
 
@@ -20,6 +20,7 @@ public class Data implements Serializable {
         this.visible = true;
         this.color=null;
         this.events = new Event();
+        this.name=null;
     }
     public String getName() {
         return name;
